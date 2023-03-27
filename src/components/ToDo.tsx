@@ -21,7 +21,7 @@ function ToDo({ text, category, id }: IToDo) {
         <li>
             <span>{text}</span>
             <button
-                name="TO_DO"
+                name={Categories.TO_DO}
                 onClick={() =>
                     onClick({ text, id, category: Categories.TO_DO })
                 }
@@ -30,7 +30,7 @@ function ToDo({ text, category, id }: IToDo) {
                 To Do
             </button>
             <button
-                name="DOING"
+                name={Categories.DOING}
                 onClick={() =>
                     onClick({ text, id, category: Categories.DOING })
                 }
@@ -39,7 +39,7 @@ function ToDo({ text, category, id }: IToDo) {
                 Doing
             </button>
             <button
-                name="DONE"
+                name={Categories.DONE}
                 onClick={() => onClick({ text, id, category: Categories.DONE })}
                 disabled={category === Categories.DONE}
             >
